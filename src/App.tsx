@@ -1,18 +1,21 @@
-import { Button, Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 import './App.css';
+import Copyright from './components/Copyright.tsx';
+import ProTip from './components/ProTip.tsx';
 
 function App() {
+	const { t } = useTranslation();
 	return (
-		<>
-			<Box m={4}>
-				<Button variant="contained" color="primary">
-					Hello World
-				</Button>
+		<Box my={4}>
+			<Box mb={2}>
+				<Typography variant="h4" component="h1">
+					{t('core.description')}
+				</Typography>
 			</Box>
-			<Box p={3}>
-				<div className="bg-red-400 text-blue-200">Hello Tailwind</div>
-			</Box>
-		</>
+			<ProTip />
+			<Copyright />
+		</Box>
 	);
 }
 
