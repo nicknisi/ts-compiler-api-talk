@@ -3,7 +3,7 @@
 import chalk from 'chalk';
 import { program } from 'commander';
 import { dirname, join } from 'path';
-import { Project, SourceFile } from 'ts-morph';
+import { Project, type SourceFile } from 'ts-morph';
 import { fileURLToPath } from 'url';
 import type ComponentConverter from '../converter/Converter.js';
 import BoxConverter from '../converter/converters/BoxConverter.js';

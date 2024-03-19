@@ -19,7 +19,7 @@ const calculateWidth = (prefix: string, value: string | undefined) => {
 };
 
 export default Converter.createConverter({
-	baseClasses: ['border-box'],
+	baseClasses: [],
 	lookup: {
 		alignContent: 'content',
 		alignItems: 'items',
