@@ -1,4 +1,5 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "@nicknisi/standard/tsconfigs/bundler",
 	"compilerOptions": {
 		"target": "ES2020",
@@ -15,12 +16,20 @@
 		"noEmit": true,
 		"jsx": "react-jsx",
 
+		"paths": {
+			"@/*": ["src/*"]
+		},
+
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+
+		"declaration": false,
+		"declarationMap": false,
+		"composite": false
 	},
 	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.scripts.json" }]
 }

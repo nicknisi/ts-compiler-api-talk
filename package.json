@@ -6,20 +6,32 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
+		"build:scripts": "tsc -p tsconfig.scripts.json",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"format": "prettier --check --write src/*",
-		"analyze": "node --import=tsimp/import scripts/analyze.ts"
+		"analyze": "node --import=tsimp/import scripts/bin/analyze.ts",
+		"convert": "node --import=tsimp/import scripts/bin/convert.ts",
+		"start": "vite"
 	},
+	"bin": {
+		"convert": "./dist/bin/convert.js",
+		"analyze": "./dist/bin/analyze.js"
+	},
+	"files": [
+		"dist"
+	],
 	"dependencies": {
 		"@material-ui/core": "4",
+		"clsx": "^2.1.0",
 		"i18next": "23.10.1",
 		"i18next-browser-languagedetector": "7.2.0",
 		"i18next-http-backend": "2.5.0",
 		"i18next-resources-to-backend": "1.2.0",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
-		"react-i18next": "14.1.0"
+		"react-i18next": "14.1.0",
+		"tailwind-merge": "^2.2.2"
 	},
 	"devDependencies": {
 		"@nicknisi/standard": "0.1.0",
@@ -30,6 +42,7 @@
 		"@typescript-eslint/parser": "7.1.1",
 		"@vitejs/plugin-react": "4.2.1",
 		"autoprefixer": "10.4.18",
+		"commander": "^12.0.0",
 		"eslint": "8.57.0",
 		"eslint-plugin-react-hooks": "4.6.0",
 		"eslint-plugin-react-refresh": "0.4.5",
@@ -38,7 +51,7 @@
 		"prettier": "3.2.5",
 		"prettier-plugin-tailwindcss": "0.5.12",
 		"tailwindcss": "3.4.1",
-		"tsimp": "2.0.11",
+		"tsimp": "^2.0.10",
 		"typescript": "5.2.2",
 		"vite": "5.1.6"
 	}

@@ -1,4 +1,4 @@
-import { Box, Grid, Link } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 export default function Copyright() {
@@ -6,11 +6,9 @@ export default function Copyright() {
 	const year = new Date().getFullYear();
 	return (
 		<Box m={4}>
-			<Grid container spacing={1} justify="center">
+			<Grid container spacing={1}>
 				<Grid item>
-					<Link color="inherit" href="https://nicknisi.com">
-						{t('core.copyright')}
-					</Link>
+					<a href="https://nicknisi.com">{t('core.copyright')}</a>
 				</Grid>
 				<Grid item>{year}</Grid>
 			</Grid>

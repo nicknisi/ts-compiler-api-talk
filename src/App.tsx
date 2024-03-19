@@ -1,4 +1,4 @@
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import './App.css';
 import Copyright from './components/Copyright.tsx';
@@ -9,9 +9,7 @@ function App() {
 	return (
 		<Box my={4}>
 			<Box mb={2}>
-				<Typography variant="h4" component="h1">
-					{t('core.description')}
-				</Typography>
+				<h4>{t('core.description')}</h4>
 			</Box>
 			<ProTip />
 			<Copyright />

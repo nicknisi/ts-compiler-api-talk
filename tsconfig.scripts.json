@@ -1,0 +1,15 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@nicknisi/standard/tsconfigs/base",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"lib": ["esnext"],
+		"composite": false,
+		"noUncheckedIndexedAccess": false,
+		"baseUrl": "./",
+		"declaration": false,
+		"declarationMap": false,
+		"useUnknownInCatchVariables": false
+	},
+	"include": ["scripts/**/*.ts"]
+}

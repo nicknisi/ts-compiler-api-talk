@@ -5,7 +5,7 @@ import { sync as glob } from 'glob';
 import { readFileSync as readFile } from 'fs';
 import { join } from 'path';
 import { cwd } from 'process';
-import printTable from './utils/printTable.js';
+import printTable from '../utils/printTable.js';
 
 const components = new Map<string, number>();
 const projects = new Map<string, number>();
