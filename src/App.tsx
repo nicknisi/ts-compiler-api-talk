@@ -1,6 +1,5 @@
 import { Box } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import './App.css';
 import Copyright from './components/Copyright.tsx';
 import ProTip from './components/ProTip.tsx';
 
