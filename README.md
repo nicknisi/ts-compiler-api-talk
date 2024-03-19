@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# TS Compiler API Talk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run this app, install dependencies with `pnpm`.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, build the scripts.
+
+```
+pnpm build:scripts
+```
+
+Scrpts can be run either by installing this app globally
+
+```
+npm i -g .
+```
+
+Or by simply running the scripts through `pnpm`.
+
+```
+pnpm <script-name>
+```
+
+## Scripts
+
+- `analyze` - Analyze source code contained within the project and print out a response.
+- `convert` - Run the transforms on the source code
+
+### Convert options
+
+```
+Usage: convert [options]
+
+Material UI to Tailwind CSS converter framework
+
+Options:
+  -r, --project-root <path>  path to project root
+  -g, --glob <path>          glob pattern to match
+  -d, --dry-run              do not write to files
+  -o --organize-imports      organize imports
+  -h, --help                 display help for command
+```
+
+## Running the web app.
+
+The web app (vite + react) can be run with `pnpm start`.
