@@ -9,7 +9,6 @@ import type ComponentConverter from '../converter/Converter.js';
 import BoxConverter from '../converter/converters/BoxConverter.js';
 import GridConverter from '../converter/converters/GridConverter.js';
 import { addImport, getElementsByJsxTagName, organizeImports as organize, swapElement } from '../converter/utils.js';
-// import { version } from '../package.json' assert { type: 'json' };
 
 program
 	.name('convert')
