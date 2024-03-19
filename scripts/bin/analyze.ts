@@ -61,16 +61,15 @@ console.log(`Here's the total usage I found, per component exported by '@materia
 
 console.log('\nTotal usage per component:\n\n');
 
-printTable(components, 'Count', 'Project');
+printTable(components, 'Component', 'Count');
 
 const total = Array.from(components.values()).reduce((count, total) => count + total, 0);
 console.log(`\nOverall, there are ${total} components imported from "@material-ui/core" across the app.`);
 
 console.log(`\nPer-component breakdown:\n\n`);
 
-printTable(projects, 'Count', 'Projects');
+printTable(projects, 'File', 'Count');
 
-// round to 2 decimal places
 const percent = Math.round((used / files.length) * 10000) / 100;
 console.log(
 	`\n\nMaterial UI components are used in ${percent}% (${used} of ${files.length}) of the components in the app.`,
