@@ -1,5 +1,7 @@
 # TS Compiler API Talk
 
+Check out the talk info at https://nicknisi.com/compiler-talk.
+
 To run this app, install dependencies with `pnpm`.
 
 ```
